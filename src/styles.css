@@ -1,0 +1,92 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.16 0.012 240);
+  --foreground: oklch(0.97 0.005 240);
+  --card: oklch(0.2 0.014 240);
+  --card-foreground: oklch(0.97 0.005 240);
+  --primary: oklch(0.62 0.23 27);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.26 0.02 220);
+  --secondary-foreground: oklch(0.97 0.005 240);
+  --muted: oklch(0.26 0.02 220);
+  --muted-foreground: oklch(0.72 0.015 240);
+  --accent: oklch(0.72 0.13 190);
+  --accent-foreground: oklch(0.16 0.012 240);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.62 0.23 27);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@utility scrim-bottom {
+  background-image: linear-gradient(
+    to top,
+    var(--background) 4%,
+    color-mix(in oklab, var(--background) 55%, transparent) 45%,
+    transparent 100%
+  );
+}
+
+@utility ring-dot {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: var(--primary);
+    margin-right: 0.5rem;
+  }
+}
