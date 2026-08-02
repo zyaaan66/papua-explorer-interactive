@@ -5,7 +5,6 @@
 Aplikasi web interaktif yang menampilkan keindahan Papua dengan tema desain
 mengikuti identitas Visit Papua.
 
-Dibuat oleh Sofyan.
 
 ## Tech stack
 
