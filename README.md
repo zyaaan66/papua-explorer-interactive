@@ -2,7 +2,7 @@
 <img width="1897" height="902" alt="image" src="https://github.com/user-attachments/assets/ff3b6074-c6ac-4fd2-b9ab-6dcdb89884a9" />
 
 
-Aplikasi web interaktif yang menampilkan keindahan Papua dengan tema desain
+Landing Page interaktif yang menampilkan keindahan Papua dengan tema desain
 mengikuti identitas Visit Papua.
 
 
